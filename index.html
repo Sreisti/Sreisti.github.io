@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sreisti Chowdhury — Portfolio</title>
+<meta name="description" content="Personal portfolio, resume, experience and projects." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <section id="card" aria-label="Contact card">
+      <div class="business-card">
+        <div class="card-photo" id="cardPhoto"></div>
+        <div class="card-info">
+          <h1 id="cardName">Loading…</h1>
+          <p class="role" id="cardRole"></p>
+          <ul class="card-contacts" id="cardContacts"></ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="resume-row">
+      <a id="resumeBtn" class="btn" href="assets/resume.pdf" download>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v12"></path>
+          <path d="M7 10l5 5 5-5"></path>
+          <path d="M5 21h14"></path>
+        </svg>
+        Download Résumé
+      </a>
+    </div>
+
+    <section aria-label="Education">
+      <div class="panel">
+        <h2><span class="section-index">01</span> Education</h2>
+        <div class="edu-timeline" id="educationList"></div>
+      </div>
+    </section>
+
+    <section aria-label="Explore">
+      <div class="nav-buttons">
+        <a class="nav-card" href="experience.html">
+          <span class="eyebrow">EXHIBIT A</span>
+          <h2>Experience</h2>
+          <p>A filterable, color-coded timeline of clubs, work, volunteer, and research experience.</p>
+          <div class="arrow">view timeline →</div>
+        </a>
+        <a class="nav-card" href="projects.html">
+          <span class="eyebrow">EXHIBIT B</span>
+          <h2>Projects</h2>
+          <p>A gallery of things I've built, with write-ups and photos.</p>
+          <div class="arrow">view gallery →</div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links" id="footerLinks"></div>
+    <div class="title-block" aria-hidden="true">
+      <div class="tb-row">
+        <div class="tb-cell"><b>Drawn by</b><span data-site-name>—</span></div>
+        <div class="tb-cell"><b>Sheet</b>1 / 1 — Home</div>
+      </div>
+      <div class="tb-row">
+        <div class="tb-cell"><b>Rev</b>1.0</div>
+        <div class="tb-cell"><b>Scale</b>1 : 1</div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="gear-fixed" id="gearIcon" aria-hidden="true"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gear.js"></script>
+</body>
+</html>

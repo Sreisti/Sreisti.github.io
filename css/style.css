@@ -1,0 +1,554 @@
+/* ============================================================
+   Shared design system — engineering-drawing-sheet aesthetic.
+   Used by index.html, experience.html and projects.html.
+   ============================================================ */
+
+:root {
+  --ink: #2b211b;
+  --ink-soft: #5b4c40;
+  --ink-faint: #8a7a6c;
+  --paper: #faf9f6;
+  --paper-alt: #f1ede4;
+  --line: rgba(43, 33, 27, 0.22);
+  --line-soft: rgba(43, 33, 27, 0.09);
+
+  --accent-work: #48607a;
+  --accent-club: #6b7a3a;
+  --accent-volunteer: #b8892b;
+  --accent-research: #a4502c;
+  --accent-ambassador: #3f7a72;
+
+  --radius: 6px;
+  --gap: 1.5rem;
+  --content-width: 960px;
+
+  --font-head: "JetBrains Mono", "Courier New", monospace;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-body);
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(
+      0deg,
+      var(--line-soft) 0 1px,
+      transparent 1px 44px
+    ),
+    repeating-linear-gradient(90deg, var(--line-soft) 0 1px, transparent 1px 44px);
+  line-height: 1.55;
+  padding-bottom: 5rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  letter-spacing: 0.01em;
+  margin: 0 0 0.5em;
+}
+
+.container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---- Top nav (experience/projects pages) ---- */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.site-nav .brand {
+  font-family: var(--font-head);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.site-nav .home-link {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  color: var(--ink-soft);
+}
+
+.site-nav .home-link:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+/* ---- Panels ---- */
+.panel {
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  padding: 1.75rem;
+}
+
+.panel > h2 {
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.1rem;
+}
+
+/* Small "spec sheet" index number preceding a section title, e.g. 01 / EDUCATION */
+.section-index {
+  display: inline-block;
+  font-size: 0.55em;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--accent-research);
+  text-transform: none;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+section {
+  padding: 2.5rem 0;
+}
+
+/* ---- Business card ---- */
+.business-card {
+  position: relative;
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  background: var(--paper);
+}
+
+/* Registration-mark corners, like a drafted sheet's crop marks */
+.business-card::before,
+.business-card::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--ink-faint);
+  opacity: 0.55;
+}
+
+.business-card::before {
+  top: -1.5px;
+  left: -1.5px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.business-card::after {
+  bottom: -1.5px;
+  right: -1.5px;
+  border-left: none;
+  border-top: none;
+}
+
+.card-photo {
+  flex: 0 0 auto;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid var(--line);
+  background: var(--paper-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-photo svg {
+  width: 60%;
+  height: 60%;
+  color: var(--ink-faint);
+}
+
+.card-info h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.15em;
+}
+
+.card-info .role {
+  font-family: var(--font-body);
+  color: var(--ink-soft);
+  margin-bottom: 0.85rem;
+  font-size: 0.95rem;
+}
+
+.card-contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+  font-family: var(--font-head);
+  max-width: 360px;
+}
+
+.contact-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.contact-label {
+  flex: 0 0 auto;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+}
+
+.contact-leader {
+  flex: 1 1 auto;
+  min-width: 0.75rem;
+  border-bottom: 1px dotted var(--line);
+  transform: translateY(-0.25rem);
+}
+
+.card-contacts a.contact-value {
+  flex: 0 0 auto;
+  text-decoration: none;
+  color: var(--ink-soft);
+}
+
+.card-contacts a.contact-value:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/* ---- Buttons ----
+   A clipped corner instead of a generic rounded pill — reads as a
+   stamped spec label rather than a stock SaaS CTA. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--paper);
+  background: var(--ink);
+  border: 1.5px solid var(--ink);
+  border-radius: 2px;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+  padding: 0.65rem 1.4rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--ink-soft);
+  transform: translateY(-1px);
+}
+
+.resume-row {
+  display: flex;
+  justify-content: center;
+  padding: 1.75rem 0 0.5rem;
+}
+
+/* ---- Education timeline ---- */
+.edu-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.edu-item {
+  border-left: 2px solid var(--line);
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.edu-item::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 0.35rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.edu-item .edu-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.edu-item .edu-dates {
+  color: var(--ink-faint);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.edu-item .edu-degree {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  margin: 0.15rem 0 0.4rem;
+}
+
+.edu-item ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* ---- Experience / Projects nav cards ---- */
+.nav-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
+.nav-card {
+  display: block;
+  position: relative;
+  border: 1.5px solid var(--line);
+  border-top-width: 3px;
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--paper);
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nav-card:nth-of-type(1) {
+  border-top-color: var(--accent-work);
+}
+
+.nav-card:nth-of-type(2) {
+  border-top-color: var(--accent-research);
+}
+
+.nav-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--line);
+}
+
+.nav-card:nth-of-type(1):hover {
+  border-top-color: var(--accent-work);
+}
+
+.nav-card:nth-of-type(2):hover {
+  border-top-color: var(--accent-research);
+}
+
+.nav-card .eyebrow {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
+  margin-bottom: 0.6rem;
+}
+
+.nav-card h2 {
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  border: none;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.nav-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.nav-card .arrow {
+  font-family: var(--font-head);
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  border-top: 1.5px solid var(--line);
+  margin-top: 1rem;
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+.title-block {
+  max-width: 420px;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: var(--font-head);
+  font-size: 0.68rem;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.title-block .tb-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.title-block .tb-row + .tb-row {
+  border-top: 1px solid var(--line-soft);
+}
+
+.title-block .tb-cell {
+  padding: 0.4rem 0.6rem;
+}
+
+.title-block .tb-cell + .tb-cell {
+  border-left: 1px solid var(--line-soft);
+}
+
+.title-block .tb-cell b {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+  margin-bottom: 0.1rem;
+}
+
+/* ---- Fixed gear / wheel icon ---- */
+.gear-fixed {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  width: 56px;
+  height: 56px;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.gear-fixed .gear-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+}
+
+.gear-fixed .gear-layer svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.gear-fixed.gear-spin-static .gear-layer {
+  animation: gear-spin 14s linear infinite;
+}
+
+@keyframes gear-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gear-fixed.gear-spin-static .gear-layer {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 720px) {
+  .business-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-contacts {
+    align-items: center;
+  }
+
+  .nav-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .gear-fixed {
+    width: 42px;
+    height: 42px;
+    left: 0.85rem;
+    bottom: 0.85rem;
+  }
+}

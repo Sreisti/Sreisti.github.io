@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Experience — Sreisti Chowdhury</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/experience.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="brand" href="index.html" data-site-name>Your Name</a>
+    <a class="home-link" href="index.html">← Home</a>
+  </nav>
+
+  <main class="container">
+    <section>
+      <h1><span class="section-index">02</span>Experience</h1>
+      <p style="color: var(--ink-soft); max-width: 60ch;">
+        Club, work, volunteer and research experience, color-coded by type. Use the
+        filters below to narrow it down. The bar on each entry shows how long it lasted.
+      </p>
+
+      <div class="exp-toolbar">
+        <div class="chip-group">
+          <span class="group-label">Type</span>
+          <div id="categoryChips" style="display: contents;"></div>
+        </div>
+        <div class="chip-group">
+          <span class="group-label">Context</span>
+          <div id="contextChips" style="display: contents;"></div>
+        </div>
+      </div>
+
+      <div class="timeline" id="timeline"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links" id="footerLinks"></div>
+  </footer>
+
+  <div class="gear-fixed" id="gearIcon" aria-hidden="true"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/experience.js"></script>
+  <script src="js/gear-static.js"></script>
+</body>
+</html>
