@@ -447,8 +447,8 @@ const PROJECTS = [
   "Applied iterative design principles by treating the project as a full product development cycle.",
   "Currently expanding the project into an embedded hardware system by designing a custom 3D-printed enclosure, integrating electronics, and building the cookbook into a portable cyberdeck that combines software, mechanical design, and hardware integration."
   ],
-  images: ["assets/projects/your-project.jpg"],
-  tags: ["Skill", "Tool"],
+  images: ["assets/projects/sreistis-cookbook.png"],
+  tags: ["Web Development", "Claude Code", "3D Printing"],
   status: "in-progress",
   links: {},
 },

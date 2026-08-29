@@ -1,3 +1,11 @@
-Profile Picture.PNG
+# Loose photos dropped at the project root (e.g. "Cookbook photo.png")
+# get ignored here once copied into assets/ — real site images live
+# in assets/ and assets/projects/, which are NOT affected by this.
+/*.png
+/*.PNG
+/*.jpg
+/*.jpeg
+/*.JPG
+
 .DS_Store
 Thumbs.db
