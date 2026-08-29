@@ -459,6 +459,5 @@ const FOOTER_LINKS = [
   { label: "GitHub", url: "https://github.com/Sreisti" },
   { label: "Instructables", url: "https://www.instructables.com/member/Sreisti" },
   { label: "LinkedIn", url: SITE.linkedin },
-  { label: "Portfolio", url: "https://sreisti-chowdhury.my.canva.site/" },
   { label: "Email", url: "mailto:" + SITE.personalEmail },
 ];
