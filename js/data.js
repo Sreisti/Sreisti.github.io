@@ -247,7 +247,7 @@ const EXPERIENCES = [
   },
 ];
 
-/* ---- PROJECTS — pulled from your Canva portfolio ----
+/* ---- PROJECTS — pulled from Canva portfolio ----
    images: array of paths — shown as a browsable photo strip in the popup
    longDescription: array of bullet points, shown as a list in the popup
    status: "completed" | "in-progress" — drives the filter tabs and the
@@ -430,13 +430,28 @@ const PROJECTS = [
       "I created three detailed maps using the program ArcGIS.",
       "Map 1: highlights the connection between urban vs. rural areas and poor wastewater quality.",
       "Map 2: explores the intersectional relationship between wastewater facilities and low-income communities.",
-      "Map 3: examined toxic metals (nitrogen) in water.",
+      "Map 3: examines toxic metals (nitrogen) in water.",
     ],
     images: ["assets/projects/mapping-justice.png", "assets/projects/mapping-justice-2.png", "assets/projects/mapping-justice-3.png"],
     tags: ["ArcGIS", "Research", "Environmental Justice"],
     status: "completed",
     links: { demo: "https://arcg.is/1PTTL4" },
   },
+
+{
+  title: "Sreisti's Cookbook",
+  shortDescription: "Personal project where I am creating a project that impacts my life. Fixing the problem of remembering traditional and new recipes and meal prepping food for college.",
+  longDescription: [
+     "Designed a digital cookbook to preserve family recipes, organize newly discovered recipes, and streamline meal preparation for a busy college schedule, solving the challenge of keeping recipes, grocery planning, and meal prep in one accessible system.",
+  "Developed the web interface with Claude Code, creating a clean, searchable recipe management platform with an emphasis on usability, organization, and long-term scalability.",
+  "Applied iterative design principles by treating the project as a full product development cycle.",
+  "Currently expanding the project into an embedded hardware system by designing a custom 3D-printed enclosure, integrating electronics, and building the cookbook into a portable cyberdeck that combines software, mechanical design, and hardware integration."
+  ],
+  images: ["assets/projects/your-project.jpg"],
+  tags: ["Skill", "Tool"],
+  status: "in-progress",
+  links: {},
+},
 ];
 
 /* ---- FOOTER_LINKS — add as many as you like ---- */
