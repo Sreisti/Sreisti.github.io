@@ -71,12 +71,34 @@ Just double-click `index.html` — everything (including `data.js`)
 loads as a regular script tag, so it works straight from the file
 system with no local server needed.
 
-## Deploying to GitHub Pages
+## Deployment
 
-1. Create a new GitHub repository and push this folder to it.
-2. In the repo's **Settings → Pages**, set the source to the `main`
-   branch, root folder.
-3. Your site will be live at `https://<your-username>.github.io/<repo-name>/`.
+This site is already deployed — it's live at **https://sreisti.github.io/**,
+pushed from this folder to the `github.com/Sreisti/Sreisti.github.io`
+repository. Because the repo is named `<username>.github.io`, GitHub
+Pages auto-publishes it at the root domain with no extra settings step.
+
+## Publishing an update
+
+**Editing the file alone does nothing to the live site.** GitHub Pages
+only rebuilds when it sees a new push, so every change — a new resume,
+a new project, a tweaked bullet point — needs to be pushed before it
+shows up at sreisti.github.io. Two ways to do that:
+
+**Option A — double-click `publish.bat`** (easiest)
+It shows you what changed, asks for a one-line description, then
+stages, commits, and pushes everything for you.
+
+**Option B — run it yourself in a terminal**, from inside this folder:
+```bash
+git add -A
+git commit -m "describe what changed"
+git push
+```
+
+Either way, the update is usually live within a minute or two. If you
+want to double check, run `git status` first — anything it lists as
+"modified" or "untracked" hasn't been published yet.
 
 ## Structure
 
@@ -94,4 +116,5 @@ js/projects.js                  Renders the gallery + popup modal
 js/gear.js                       Home page only: wheel → gear scroll animation
 js/gear-static.js                 Experience/Projects pages: simple spinning gear
 assets/                             Resume, profile photo, project images
+publish.bat                          Double-click to push changes live
 ```
