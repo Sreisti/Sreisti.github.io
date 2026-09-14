@@ -554,7 +554,7 @@ const PROJECTS = [
     images: ["assets/projects/micropipette-holder.png", "assets/projects/micropipette-holder-2.jpg"],
     tags: ["Fusion 360", "CAD"],
     status: "completed",
-    links: { demo: "https://a360.co/4nqcG1l" },
+    links: {},
   },
 ];
 
