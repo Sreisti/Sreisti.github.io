@@ -54,6 +54,19 @@ const EDUCATION = [
             filter chips on experience.html */
 const EXPERIENCES = [
   {
+    title: "Undergraduate Student Researcher",
+    org: "Anasori Layered Materials & Structures Lab",
+    category: "research",
+    context: ["Purdue", "In Person"],
+    start: "Aug 2026",
+    end: "Present",
+    bullets: [
+      "Prepare and process samples for high-entropy nitride MAX phase and MXene experiments evaluating material performance for mechanical and manufacturing applications",
+      "Developed an AI-assisted workflow that converts Materials Project graphs into Excel datasets for two material properties used in ongoing lab research, cutting manual data extraction from about an hour to five minutes",
+      "Maintain experimental documentation and follow standardized laboratory procedures to ensure reproducible results",
+    ],
+  },
+  {
     title: "UUAA Student Academic Advising Ambassador",
     org: "Purdue University",
     category: "work",
