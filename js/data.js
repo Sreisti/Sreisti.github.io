@@ -320,7 +320,7 @@ const PROJECTS = [
       action:
         "I designed the blade geometry in Fusion 360 and collected voltage output data using a multimeter to evaluate the design's performance.",
       result:
-        "The design satisfied both the PLTW classroom assignment and Science Olympiad prep requirements.",
+        "The design's output was strong enough to place among the top ten at the Science Olympiad Central Florida regional, while also satisfying the PLTW classroom assignment.",
     },
     images: ["assets/projects/windmill-build-lab.jpg", "assets/projects/windmill-build-lab-2.png", "assets/projects/windmill-build-lab-3.png"],
     tags: ["Fusion 360", "CAD", "Data Collection"],
