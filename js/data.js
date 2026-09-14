@@ -554,7 +554,7 @@ const PROJECTS = [
     images: ["assets/projects/xrd-to-excel-placeholder.svg"],
     tags: ["Python", "Claude Code", "Web Development", "Data Analysis"],
     status: "completed",
-    links: {},
+    links: { demo: "https://sreisti.github.io/mp-xrd-to-excel/" },
   },
 ];
 
