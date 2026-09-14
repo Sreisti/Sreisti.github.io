@@ -551,7 +551,7 @@ const PROJECTS = [
       result:
         "The tool cut manual data extraction from about an hour to five minutes and is now used as part of the lab's ongoing MAX phase and MXene research.",
     },
-    images: ["assets/projects/xrd-to-excel-placeholder.svg"],
+    images: ["assets/projects/xrd-to-excel.png"],
     tags: ["Python", "Claude Code", "Web Development", "Data Analysis"],
     status: "completed",
     links: { demo: "https://sreisti.github.io/mp-xrd-to-excel/" },
