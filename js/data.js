@@ -249,7 +249,9 @@ const EXPERIENCES = [
 
 /* ---- PROJECTS — pulled from Canva portfolio ----
    images: array of paths — shown as a browsable photo strip in the popup
-   longDescription: array of bullet points, shown as a list in the popup
+   longDescription: STAR-method object { situation, task, action, result },
+     shown as four labeled blocks in the popup. Omit "result" only for a
+     genuinely still-in-progress project with no outcome yet.
    status: "completed" | "in-progress" — drives the filter tabs and the
            "In Progress" badge on the gallery card and popup
    links: optional — omit a key to hide that button in the popup */
@@ -257,13 +259,16 @@ const PROJECTS = [
   {
     title: "Alle IoT: Improving Battery Life in IoT Security Solutions",
     shortDescription: "VIP research project developing power-saving solutions for a security lock battery system.",
-    longDescription: [
-      "Tasked with developing a solution to increase the battery life of the system. We work with energy systems to calculate the power used in a security lock battery.",
-      "I am a part of the communication and archiving group. The communication group maintains contact with our client, Allegion. The archivist group focuses on analysing and deciphering last year's data to contribute to this year's data.",
-      "Tasked with researching four key solutions for the research project.",
-      "Created a video to explore the research topic.",
-      "Created the poster presentation to display a summary and visual analysis of the project.",
-    ],
+    longDescription: {
+      situation:
+        "Purdue's Vertically Integrated Projects (VIP) program partnered with Allegion because their security lock's battery life was falling short of expectations, lasting only months instead of years in the field.",
+      task:
+        "As part of a 12-person VIP team, I joined the communication and archiving group, responsible for staying in contact with Allegion and analyzing the previous semester's data to inform this semester's direction toward a longer-lasting, lower-power design.",
+      action:
+        "I researched four candidate power-saving solutions, reconciled and analyzed the prior year's findings to avoid repeating dead ends, maintained regular contact with our client Allegion to keep our work aligned with their needs, and helped produce a summary video and a poster presenting the team's findings.",
+      result:
+        "We presented all four proposed solutions to Purdue staff and students alongside our Allegion engineer, earning approval for next year's VIP group to explore them further, and left detailed documentation behind to carry the work into the following school year.",
+    },
     images: ["assets/projects/alle-iot.png", "assets/projects/alle-iot-2.png", "assets/projects/alle-iot-3.png"],
     tags: ["VIP", "Research", "Data Analysis"],
     status: "completed",
@@ -272,11 +277,15 @@ const PROJECTS = [
   {
     title: "Small Projects Spring 2026: Turrets",
     shortDescription: "Team-built turret mechanism for a Purdue-hosted ASME Small Projects Competition, placing 3rd.",
-    longDescription: [
-      "As a part of a team, I helped assemble the turret mechanism for a Purdue-hosted Small Projects Competition.",
-      "Helped brainstorm ideas for how the turret may stay locked and standing in place.",
-      "During competitions, I helped advise on where to aim the golf balls and support adjustment efforts. All resulted in our team placing 3rd in the competition.",
-    ],
+    longDescription: {
+      situation:
+        "ASME hosted a Purdue-wide Small Projects Competition challenging student teams to design and operate a turret mechanism under shared competition constraints.",
+      task:
+        "My role on the team was to help assemble the turret and figure out, with the rest of the team, how to keep it locked and stable while it was in use.",
+      action:
+        "I helped assemble the turret mechanism, brainstormed solutions for keeping it locked and standing in place, and during the competition itself advised on where to aim and supported the team's real-time adjustments.",
+      result: "Our team placed 3rd overall in the competition.",
+    },
     images: ["assets/projects/asme-turrets.png", "assets/projects/asme-turrets-2.png"],
     tags: ["ASME", "Assembly", "Mechanism Design"],
     status: "completed",
@@ -285,11 +294,16 @@ const PROJECTS = [
   {
     title: "UN Countries History Explorer",
     shortDescription: "A Python history-fact generator combining programming with a love of history (ENGR 133 final project).",
-    longDescription: [
-      "Tasked in class to create a final project of our choosing. I created a history fact generator to combine my hobbies of history and programming.",
-      "Programmed on VS Code that launches a web browser with user-interactive graphics.",
-      "Wrote an entire data sheet recording the UN-recognized 193 countries and their corresponding fun facts.",
-    ],
+    longDescription: {
+      situation:
+        "Purdue's ENGR 133 course closed with an open-ended final project: design and build anything that demonstrated the semester's programming skills.",
+      task:
+        "Rather than a purely academic exercise, I wanted to build something that combined my interest in history with what I'd learned about programming.",
+      action:
+        "I programmed a Python application in VS Code that launches an interactive browser experience, and built a complete dataset covering all 193 UN-recognized countries, each paired with its own history fact.",
+      result:
+        "The project earned a strong coursework grade, and when I showed it off to my peers it received positive feedback on both the concept and the execution.",
+    },
     images: ["assets/projects/history-explorer.png", "assets/projects/history-explorer-2.png", "assets/projects/history-explorer-3.png"],
     tags: ["Python", "Web Dev"],
     status: "completed",
@@ -298,10 +312,16 @@ const PROJECTS = [
   {
     title: "WindMill Build Lab",
     shortDescription: "Designed a windmill blade mounted to a DC motor and measured its power output.",
-    longDescription: [
-      "This project involves designing a windmill blade that mounts onto the shaft of a DC motor with a maximum diameter of 9.5 inches. The maximum voltage produced by the motor will be measured using a multimeter.",
-      "I designed the fans on Fusion, and I collected the data using the multimeter.",
-    ],
+    longDescription: {
+      situation:
+        "This design ran alongside two parallel efforts at once: a project for my high school's PLTW Aerospace Engineering classroom, and prep for a Science Olympiad event at the Central Florida regional.",
+      task:
+        "Design a windmill blade that mounts onto the shaft of a DC motor within a 9.5-inch maximum diameter, then evaluate how much voltage it produces.",
+      action:
+        "I designed the blade geometry in Fusion 360 and collected voltage output data using a multimeter to evaluate the design's performance.",
+      result:
+        "The design satisfied both the PLTW classroom assignment and Science Olympiad prep requirements.",
+    },
     images: ["assets/projects/windmill-build-lab.jpg", "assets/projects/windmill-build-lab-2.png", "assets/projects/windmill-build-lab-3.png"],
     tags: ["Fusion 360", "CAD", "Data Collection"],
     status: "completed",
@@ -310,10 +330,16 @@ const PROJECTS = [
   {
     title: "Conspiracy Theory Golf Course",
     shortDescription: "3D-modeled two holes (Flat Earth and the Fake Moon Landing) for a team-built mini golf course.",
-    longDescription: [
-      "Team project, we were tasked with creating a unique golf course. My team chose to make a course themed after conspiracy theories.",
-      "I planned and 3D modeled 2 of the holes to be Flat Earth and Fake Moon Landing inspired.",
-    ],
+    longDescription: {
+      situation:
+        "In my high school's PLTW Introduction to Engineering course, teams were tasked with designing a unique mini golf course.",
+      task:
+        "As a team, design a themed mini golf course; we chose to theme ours around conspiracy theories.",
+      action:
+        "I planned and 3D modeled two of the holes in Fusion 360: a Flat Earth-themed island and a Fake Moon Landing set.",
+      result:
+        "We presented the finished course concept to our classmates.",
+    },
     images: ["assets/projects/conspiracy-golf-course.png", "assets/projects/conspiracy-golf-course-2.png"],
     tags: ["Fusion 360", "CAD", "Themed Design"],
     status: "completed",
@@ -322,10 +348,16 @@ const PROJECTS = [
   {
     title: "University of Florida Gator Project",
     shortDescription: "Built an electronic alligator combining sensors, circuits, and 3D-printed parts.",
-    longDescription: [
-      "Part of a Dual Enrollment Engineering Class final project through the University of Florida.",
-      "Built an alligator combining multiple lessons learned in class (sensors, plastics, circuits, etc.) and a tutorial with the University of Florida.",
-    ],
+    longDescription: {
+      situation:
+        "A Dual Enrollment Engineering course through the University of Florida closed with a final project meant to bring together everything covered that semester.",
+      task:
+        "Build a project combining the sensors, plastics, and circuits lessons from the course, following a UF-provided tutorial.",
+      action:
+        "I built an electronic alligator, integrating sensor components, 3D-printed parts, and circuitry according to the University of Florida's tutorial.",
+      result:
+        "I earned a strong grade for the course and came away with hands-on exposure to multiple engineering disciplines working together in a single build — electrical, mechanical, and chemical.",
+    },
     images: ["assets/projects/uf-gator-project.jpg", "assets/projects/uf-gator-project-2.jpg"],
     tags: ["Electronics", "Circuits", "3D Printing"],
     status: "completed",
@@ -334,10 +366,15 @@ const PROJECTS = [
   {
     title: "Habitat for Humanity Model Project",
     shortDescription: "Modeled a 3-bedroom, 3-bathroom house in Revit following Habitat for Humanity's building constraints.",
-    longDescription: [
-      "Civil Engineering class tasked to create a 3-bedroom and 3-bathroom house following the constraints of a Habitat for Humanity build.",
-      "An individual project.",
-    ],
+    longDescription: {
+      situation:
+        "My high school's PLTW Civil Engineering course required students to design a home that met Habitat for Humanity's real building-code constraints, not just a freeform floor plan.",
+      task:
+        "Individually design a 3-bedroom, 3-bathroom house in Revit that satisfied every constraint on Habitat for Humanity's specification list, including door and hallway widths, turning radii, and room sizes.",
+      action:
+        "I modeled the full house in Revit, checking each dimension against Habitat for Humanity's building code requirements as I went.",
+      result: "The design was graded as part of the course.",
+    },
     images: [
       "assets/projects/habitat-for-humanity.png",
       "assets/projects/habitat-for-humanity-2.jpg",
@@ -351,11 +388,16 @@ const PROJECTS = [
   {
     title: "Micropipette Holder",
     shortDescription: "Designed and modeled a micropipette holder for a Biomedical classroom in Fusion 360.",
-    longDescription: [
-      "Supported the Biomedical teacher at Horizon High School by creating multiple micropipette holders.",
-      "I worked in a team to develop this project, from interviewing and brainstorming to creation.",
-      "Created the model through Autodesk Fusion 360.",
-    ],
+    longDescription: {
+      situation:
+        "The Biomedical teacher at Horizon High School needed multiple micropipette holders for classroom use and didn't have a ready source for them.",
+      task:
+        "As part of a small team, design and produce holders that fit the teacher's classroom needs.",
+      action:
+        "I helped interview the teacher to understand requirements, brainstormed design options with my team, and modeled the final holder in Autodesk Fusion 360.",
+      result:
+        "The holder became a recurring classroom fixture — it's been reprinted three times a year since, as the Biomedical teacher keeps bringing in more micropipettes for students to use.",
+    },
     images: ["assets/projects/micropipette-holder.png", "assets/projects/micropipette-holder-2.jpg"],
     tags: ["Fusion 360", "CAD"],
     status: "completed",
@@ -363,11 +405,17 @@ const PROJECTS = [
   },
   {
     title: "Trajectory",
-    shortDescription: "Designed, built, and calibrated a catapult for a Science Olympiad projectile competition.",
-    longDescription: [
-      "Competition where we needed to design, construct, and calibrate a single device capable of launching projectiles onto a target following certain criteria (material, size, etc.).",
-      "I created the sketch of the design, built the catapult, and collected data.",
-    ],
+    shortDescription: "Designed, built, and calibrated a catapult that won 1st place at the Science Olympiad Central Florida regional.",
+    longDescription: {
+      situation:
+        "Science Olympiad's Trajectory event required a single device capable of launching projectiles at a target under set material and size constraints.",
+      task:
+        "Design, build, and calibrate a catapult that met those constraints and performed accurately for competition.",
+      action:
+        "I sketched the design, built the catapult, and collected calibration data to dial in its accuracy before competing.",
+      result:
+        "The catapult won 1st place at the Science Olympiad Central Florida regional competition, with strong accuracy against the target.",
+    },
     images: [
       "assets/projects/trajectory-catapult.jpg",
       "assets/projects/trajectory-catapult-2.jpg",
@@ -381,10 +429,16 @@ const PROJECTS = [
   {
     title: "Flight",
     shortDescription: "Designed and built a free-flight, rubber-powered balsa wood aircraft for maximum time aloft.",
-    longDescription: [
-      "Competition where the team designed, constructed, and tested free-flight rubber-powered aircraft to achieve maximum time aloft.",
-      "I carefully created the plane using balsa wood.",
-    ],
+    longDescription: {
+      situation:
+        "Science Olympiad's Flight event challenged teams to build a free-flight, rubber-powered aircraft optimized purely for time aloft.",
+      task:
+        "Design and build an aircraft that would stay airborne as long as possible within the event's rules.",
+      action:
+        "I carefully built the aircraft out of balsa wood, balancing weight and structure to maximize flight performance.",
+      result:
+        "The aircraft placed among the top ten at Science Olympiad for time aloft, delivering consistent flight times.",
+    },
     images: [
       "assets/projects/flight-glider.jpg",
       "assets/projects/flight-glider-2.png",
@@ -398,9 +452,16 @@ const PROJECTS = [
   {
     title: "Engineering (Rube Goldberg)",
     shortDescription: "Built a Rube Goldberg machine in two hours to knock down a row of dominoes.",
-    longDescription: [
-      "Teams spend two hours creating a Rube Goldberg project designed to knock down a row of dominoes.",
-    ],
+    longDescription: {
+      situation:
+        "A BETA Club timed-build challenge gave teams a fixed two-hour window to design and build a working Rube Goldberg machine.",
+      task:
+        "As a team, build a chain-reaction machine within the two-hour limit that would successfully knock down a row of dominoes.",
+      action:
+        "I worked with my team within the two-hour window to design and construct the machine from the materials provided.",
+      result:
+        "The machine worked successfully, completing the chain reaction to knock down the dominoes, in the BETA Club Rube Goldberg contest.",
+    },
     images: ["assets/projects/rube-goldberg.jpg", "assets/projects/rube-goldberg-2.jpg"],
     tags: ["Woodworking", "Mechanism Design"],
     status: "completed",
@@ -409,10 +470,16 @@ const PROJECTS = [
   {
     title: "Living Literature",
     shortDescription: "Led a team building a themed set representing a scene from Keepers of the Lost City.",
-    longDescription: [
-      "A competition where a team had to build a set representing a book scene, following the criteria.",
-      "I led the team by choosing the book scene (Keepers of the Lost City), planning the set, and creating the props.",
-    ],
+    longDescription: {
+      situation:
+        "A BETA Club competition tasked teams with building a physical set representing a scene from a book, judged against a set list of criteria.",
+      task:
+        "As team lead, choose the scene, plan the set, and oversee its construction from concept to finished build.",
+      action:
+        "I selected the scene from Keepers of the Lost City, planned the set design, and led the team through building and painting the props.",
+      result:
+        "The team received strong feedback from judges for the creativity and uniqueness of our book choice and set design in the BETA Club Living Literature competition.",
+    },
     images: [
       "assets/projects/living-literature.jpg",
       "assets/projects/living-literature-2.jpg",
@@ -425,33 +492,39 @@ const PROJECTS = [
   {
     title: "The Impact of Waste and Nutrient Runoff in Florida",
     shortDescription: "Built three ArcGIS maps for the Mapping Justice program studying wastewater's link to environmental justice.",
-    longDescription: [
-      "In a team of three (from three parts of Florida), we created a project to advocate for environmental justice.",
-      "I created three detailed maps using the program ArcGIS.",
-      "Map 1: highlights the connection between urban vs. rural areas and poor wastewater quality.",
-      "Map 2: explores the intersectional relationship between wastewater facilities and low-income communities.",
-      "Map 3: examines toxic metals (nitrogen) in water.",
-    ],
+    longDescription: {
+      situation:
+        "trubel&co's Mapping Justice program selected roughly 20 students nationally to study environmental justice using GIS mapping tools.",
+      task:
+        "As a 3-person team with members from three different parts of Florida, investigate wastewater runoff and its connection to environmental justice across the state.",
+      action:
+        "I built three detailed maps in ArcGIS: one connecting urban vs. rural areas to poor wastewater quality, one exploring the intersectional relationship between wastewater facilities and low-income communities, and one examining toxic metals (nitrogen) in water near a major wastewater reclamation facility.",
+      result:
+        "My team and I presented our findings to a panel of environmental professionals at trubel&co to close out the program.",
+    },
     images: ["assets/projects/mapping-justice.png", "assets/projects/mapping-justice-2.png", "assets/projects/mapping-justice-3.png"],
     tags: ["ArcGIS", "Research", "Environmental Justice"],
     status: "completed",
     links: { demo: "https://arcg.is/1PTTL4" },
   },
-
-{
-  title: "Sreisti's Cookbook",
-  shortDescription: "Personal project where I am creating a project that impacts my life. Fixing the problem of remembering traditional and new recipes and meal prepping food for college.",
-  longDescription: [
-     "Designed a digital cookbook to preserve family recipes, organize newly discovered recipes, and streamline meal preparation for a busy college schedule, solving the challenge of keeping recipes, grocery planning, and meal prep in one accessible system.",
-  "Developed the web interface with Claude Code, creating a clean, searchable recipe management platform with an emphasis on usability, organization, and long-term scalability.",
-  "Applied iterative design principles by treating the project as a full product development cycle.",
-  "Currently expanding the project into an embedded hardware system by designing a custom 3D-printed enclosure, integrating electronics, and building the cookbook into a portable cyberdeck that combines software, mechanical design, and hardware integration."
-  ],
-  images: ["assets/projects/sreistis-cookbook.png"],
-  tags: ["Web Development", "Claude Code", "3D Printing"],
-  status: "in-progress",
-  links: {},
-},
+  {
+    title: "Sreisti's Cookbook",
+    shortDescription: "A personal digital cookbook and meal-prep system, now expanding into a physical hardware build.",
+    longDescription: {
+      situation:
+        "Between preserving family recipes and keeping up with a busy college schedule, I kept losing track of recipes, grocery lists, and meal prep across scattered notes and apps.",
+      task:
+        "Build a personal system that consolidates recipe management, grocery planning, and meal prep into one place I'd actually keep using.",
+      action:
+        "I built the web interface using Claude Code, treating it as a full product development cycle focused on usability, organization, and long-term scalability, and am now expanding it into an embedded hardware system with a custom 3D-printed enclosure and integrated electronics.",
+      result:
+        "The web platform is live and in regular use for my own meal planning; I'm currently building the hardware cyberdeck as the project's next phase.",
+    },
+    images: ["assets/projects/sreistis-cookbook.png"],
+    tags: ["Web Development", "Claude Code", "3D Printing"],
+    status: "in-progress",
+    links: {},
+  },
 ];
 
 /* ---- FOOTER_LINKS — add as many as you like ---- */

@@ -109,7 +109,7 @@ function buildModal() {
         <div class="modal-info">
           <h3 id="modalTitle"></h3>
           <div class="project-tags" id="modalTags"></div>
-          <ul class="modal-bullets" id="modalDescription"></ul>
+          <div class="star-block" id="modalDescription"></div>
           <div class="modal-links" id="modalLinks"></div>
         </div>
       </div>
@@ -191,9 +191,7 @@ function fillModal() {
   titleEl.innerHTML =
     project.status === "in-progress" ? '<span class="status-badge-inline">In Progress</span><br>' : "";
   titleEl.append(project.title);
-  document.getElementById("modalDescription").innerHTML = project.longDescription
-    .map((bullet) => `<li>${bullet}</li>`)
-    .join("");
+  document.getElementById("modalDescription").innerHTML = renderStar(project.longDescription);
   document.getElementById("modalTags").innerHTML = (project.tags || [])
     .map((t) => `<span>${t}</span>`)
     .join("");
@@ -219,6 +217,19 @@ function fillModal() {
   const links = project.links || {};
   if (links.github) linksWrap.appendChild(makeLinkBtn("GitHub ↗", links.github));
   if (links.demo) linksWrap.appendChild(makeLinkBtn("Live Demo ↗", links.demo));
+}
+
+function renderStar(star) {
+  const rows = [
+    ["Situation", star.situation],
+    ["Task", star.task],
+    ["Action", star.action],
+    ["Result", star.result],
+  ];
+  return rows
+    .filter(([, text]) => text)
+    .map(([label, text]) => `<div class="star-row"><span class="star-label">${label}</span><p>${text}</p></div>`)
+    .join("");
 }
 
 function makeLinkBtn(label, url) {
