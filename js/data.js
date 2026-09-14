@@ -356,7 +356,7 @@ const PROJECTS = [
       action:
         "I built an electronic alligator, integrating sensor components, 3D-printed parts, and circuitry according to the University of Florida's tutorial.",
       result:
-        "I earned a strong grade for the course and came away with hands-on exposure to multiple engineering disciplines working together in a single build — electrical, mechanical, and chemical.",
+        "I earned a strong grade for the course and came away with hands-on exposure to multiple engineering disciplines working together in a single build: electrical, mechanical, and chemical.",
     },
     images: ["assets/projects/uf-gator-project.jpg", "assets/projects/uf-gator-project-2.jpg"],
     tags: ["Electronics", "Circuits", "3D Printing"],
@@ -396,7 +396,7 @@ const PROJECTS = [
       action:
         "I helped interview the teacher to understand requirements, brainstormed design options with my team, and modeled the final holder in Autodesk Fusion 360.",
       result:
-        "The holder became a recurring classroom fixture — it's been reprinted three times a year since, as the Biomedical teacher keeps bringing in more micropipettes for students to use.",
+        "The holder became a recurring classroom fixture, reprinted three times a year since, as the Biomedical teacher keeps bringing in more micropipettes for students to use.",
     },
     images: ["assets/projects/micropipette-holder.png", "assets/projects/micropipette-holder-2.jpg"],
     tags: ["Fusion 360", "CAD"],

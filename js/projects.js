@@ -173,7 +173,7 @@ function setImage(i) {
   const project = PROJECTS[currentIndex];
   currentImageIndex = i;
   document.getElementById("modalImage").src = project.images[i];
-  document.getElementById("modalImage").alt = `${project.title} — photo ${i + 1} of ${project.images.length}`;
+  document.getElementById("modalImage").alt = `${project.title}: photo ${i + 1} of ${project.images.length}`;
   document.getElementById("modalImageCount").textContent =
     project.images.length > 1 ? `${i + 1} / ${project.images.length}` : "";
   document.querySelectorAll("#modalThumbs .modal-thumb").forEach((thumb, idx) => {
