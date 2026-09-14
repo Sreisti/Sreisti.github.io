@@ -538,6 +538,24 @@ const PROJECTS = [
     status: "in-progress",
     links: {},
   },
+  {
+    title: "XRD to Excel",
+    shortDescription: "A Claude Code-built web tool that converts Materials Project graphs into Excel datasets, cutting manual data extraction from about an hour to five minutes.",
+    longDescription: {
+      situation:
+        "The Anasori Lab's MAX phase and MXene research relied on manually extracting material property data from Materials Project graphs, a repetitive process that ate up close to an hour per dataset.",
+      task:
+        "Build a tool that could pull that same data directly into a usable Excel format, freeing up time for the lab's actual experimental work.",
+      action:
+        "I built a web-based tool with Claude Code, using Python for the data-processing logic and an HTML interface, that reads Materials Project graphs and converts them into structured Excel datasets for two material properties used in ongoing lab research.",
+      result:
+        "The tool cut manual data extraction from about an hour to five minutes and is now used as part of the lab's ongoing MAX phase and MXene research.",
+    },
+    images: ["assets/projects/xrd-to-excel-placeholder.svg"],
+    tags: ["Python", "Claude Code", "Web Development", "Data Analysis"],
+    status: "completed",
+    links: {},
+  },
 ];
 
 /* ---- FOOTER_LINKS — add as many as you like ---- */

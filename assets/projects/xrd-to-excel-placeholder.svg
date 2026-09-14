@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <pattern id="grid1" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#2b211b" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="300" fill="#f1ede4"/>
+  <rect width="400" height="300" fill="url(#grid1)"/>
+  <rect x="0.5" y="0.5" width="399" height="299" fill="none" stroke="#2b211b" stroke-opacity="0.25"/>
+  <text x="200" y="150" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="16" fill="#5b4c40">Add a photo:</text>
+  <text x="200" y="172" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="16" fill="#5b4c40">XRD to Excel</text>
+</svg>
