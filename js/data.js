@@ -282,10 +282,10 @@ const PROJECTS = [
       result:
         "The final design provides organized storage for seven days of contact lenses, simplifies cleaning through the removable sliding tray, and eliminates the need to repeatedly check prescription labels to determine the correct lens for each eye.",
     },
-    images: ["assets/projects/xrd-to-excel.png"],
+    images: ["assets\projects\Contacts.jpeg", "assets\projects\Contacts 2.jpeg"],
     tags: ["Fusion", "CAD"],
     status: "completed",
-    links: { demo: "https://sreisti.github.io/mp-xrd-to-excel/" },
+    links: { demo: "https://a360.co/3VFMLds" },
   },
   {
     title: "XRD to Excel",
