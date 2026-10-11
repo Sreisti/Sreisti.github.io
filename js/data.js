@@ -282,7 +282,7 @@ const PROJECTS = [
       result:
         "The final design provides organized storage for seven days of contact lenses, simplifies cleaning through the removable sliding tray, and eliminates the need to repeatedly check prescription labels to determine the correct lens for each eye.",
     },
-    images: ["assets\projects\Contacts.jpeg", "assets\projects\Contacts 2.jpeg"],
+    images: ["assets\projects\Contacts.png", "assets\projects\Contacts 2.png"", "assets\projects\Contactlenses.png"],
     tags: ["Fusion", "CAD"],
     status: "completed",
     links: { demo: "https://a360.co/3VFMLds" },
