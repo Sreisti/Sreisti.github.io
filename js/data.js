@@ -270,6 +270,24 @@ const EXPERIENCES = [
    links: optional — omit a key to hide that button in the popup */
 const PROJECTS = [
   {
+    title: "Contact Lenses Holder",
+    shortDescription: "A CAD modeled product used to help store my contact lenses in the bathroom for easy use.",
+    longDescription: {
+      situation:
+        "Keeping a week's worth of daily contact lenses organized was inconvenient because standard packaging takes up space, is difficult to clean, and requires checking prescription information to distinguish between my left and right lenses.",
+      task:
+        "Design a compact, reusable contact lens holder that stores one week's worth of lenses, is easy to clean, and provides an intuitive way to identify left and right lenses without referencing prescription packaging.",
+      action:
+        "I designed and modeled a custom contact lens holder in Autodesk Fusion, incorporating a sliding mechanism that allows the trays to be easily removed for cleaning and quick access. I applied engineering tolerances to ensure the sliding components fit together smoothly without excessive friction or looseness while maintaining manufacturability. The design also includes dedicated left- and right-eye compartments for each day of the week to simplify lens identification and organization.",
+      result:
+        "The final design provides organized storage for seven days of contact lenses, simplifies cleaning through the removable sliding tray, and eliminates the need to repeatedly check prescription labels to determine the correct lens for each eye.",
+    },
+    images: ["assets/projects/xrd-to-excel.png"],
+    tags: ["Fusion", "CAD"],
+    status: "completed",
+    links: { demo: "https://sreisti.github.io/mp-xrd-to-excel/" },
+  },
+  {
     title: "XRD to Excel",
     shortDescription: "A Claude Code-built web tool that converts Materials Project graphs into Excel datasets, cutting manual data extraction from about an hour to five minutes.",
     longDescription: {
@@ -372,7 +390,7 @@ const PROJECTS = [
         "The design's output was strong enough to place among the top ten at the Science Olympiad Central Florida regional, while also satisfying the PLTW classroom assignment.",
     },
     images: ["assets/projects/windmill-build-lab.jpg", "assets/projects/windmill-build-lab-2.png", "assets/projects/windmill-build-lab-3.png"],
-    tags: ["Fusion 360", "CAD", "Data Collection"],
+    tags: ["Fusion", "CAD", "Data Collection"],
     status: "completed",
     links: { demo: "https://a360.co/4qcVdet" },
   },
